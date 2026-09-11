@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Inter", system-ui, sans-serif;
+}
+
+body {
+  background: radial-gradient(ellipse at top, #131a33 0%, #0a0e1f 65%);
+  color: #eef1f8;
+  min-height: 100vh;
+}
+
+.card {
+  @apply rounded-2xl border border-white/10 bg-white/[0.03] shadow-soft backdrop-blur-sm;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-xl px-6 py-3 font-medium transition-all duration-200 active:scale-[0.98];
+}
+
+.btn-primary {
+  @apply btn bg-gradient-to-b from-sun-soft to-sun text-midnight-950 shadow-glowSun hover:brightness-105;
+}
+
+.btn-secondary {
+  @apply btn border border-white/15 bg-white/[0.04] text-white/90 hover:bg-white/[0.08];
+}
+
+.btn-moon {
+  @apply btn bg-gradient-to-b from-moon-soft to-moon text-midnight-950 shadow-glowMoon hover:brightness-105;
+}
+
+.text-glow-sun {
+  text-shadow: 0 0 18px rgba(244, 199, 107, 0.45);
+}
+
+.text-glow-moon {
+  text-shadow: 0 0 18px rgba(159, 184, 217, 0.45);
+}
